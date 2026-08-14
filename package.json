@@ -1,6 +1,6 @@
 {
-  "name": "paystack-sdk",
-  "version": "3.8.0",
+  "name": "@delivast/paystack-sdk",
+  "version": "3.9.0",
   "description": "Paystack SDK written in Typescript",
   "main": "dist/index.js",
   "author": "Tech Priest",
@@ -23,15 +23,15 @@
     "@typescript-eslint/eslint-plugin": "5.36.2",
     "@typescript-eslint/parser": "5.36.2",
     "eslint": "8.6.0",
-    "jest": "^30.0.5",
+    "jest": "^30.4.2",
     "prettier": "2.5.1",
-    "ts-jest": "^29.4.1",
+    "ts-jest": "^29.4.12",
     "ts-node": "10.4.0",
     "typescript": "5.5",
     "typescript-eslint": "0.0.1-alpha.0"
   },
   "dependencies": {
-    "axios": "1.16.0"
+    "axios": "1.19.0"
   },
   "files": [
     "dist/**/*"
@@ -46,6 +46,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tekpriest/paystack-node.git"
+    "url": "git+https://github.com/Juuuub/paystack-node.git"
   }
 }

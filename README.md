@@ -11,24 +11,33 @@
 ## Quick Start
 
 ```bash
-npm install paystack-sdk
+npm install @delivast/paystack-sdk
 # or
-yarn add paystack-sdk
+yarn add @delivast/paystack-sdk
 ```
 
 ```ts
-import Paystack from 'paystack-sdk';
+import Paystack from '@delivast/paystack-sdk';
 
 const paystack = new Paystack('sk_live_...');
 
-// Charge a card
-const charge = await paystack.charge.initialize({
+// Initialize a transaction
+const initialized = await paystack.transaction.initialize({
   email: 'customer@example.com',
-  amount: 500000, // NGN 5,000
+  amount: '500000',
 });
 
 // Verify a transaction
 const tx = await paystack.transaction.verify('tx_ref_abc123');
+
+// Card pre-authorization (ZAR)
+const hold = await paystack.preAuthorization.initialize({
+  email: 'customer@example.com',
+  amount: '1000',
+  currency: 'ZAR',
+  expire_after_days: 3,
+  expire_action: 'release',
+});
 ```
 
 ## Supported Modules
@@ -44,6 +53,9 @@ const tx = await paystack.transaction.verify('tx_ref_abc123');
 | Verification | ✅ | Bulk Charges | ✅ |
 | Apple Pay | ✅ | Dedicated Virtual Accounts | ✅ |
 | Miscellaneous | ✅ | Transfers Control | ✅ |
+| PreAuthorization | ✅ | Direct Debit | ✅ |
+| Disputes | ✅ | Payment Requests | ✅ |
+| Terminals | ✅ | Virtual Terminals | ✅ |
 
 ## License
 

@@ -24,6 +24,7 @@ import { Verification } from './verification/verification';
 import { VirtualTerminal } from './virtualterminal/virtualterminal';
 import { Refund } from './refund/refund';
 import { Misc } from './misc/misc';
+import { PreAuthorization } from './preauthorization/preAuthorization';
 import axios from 'axios';
 
 /**
@@ -58,6 +59,7 @@ export class Paystack {
   public verification: Verification;
   public virtualTerminal: VirtualTerminal;
   public misc: Misc;
+  public preAuthorization: PreAuthorization;
   constructor(private readonly key: string) {
     this.http = axios.create({
       baseURL: 'https://api.paystack.co',
@@ -95,6 +97,7 @@ export class Paystack {
     this.verification = new Verification(this.http);
     this.virtualTerminal = new VirtualTerminal(this.http);
     this.misc = new Misc(this.http);
+    this.preAuthorization = new PreAuthorization(this.http);
   }
 }
 

@@ -7,7 +7,7 @@ This project adheres to Semantic Versioning.
 
 ### Added
 
-- **preauthorization:** initialize, reserve, verify, capture, release, list, and fetch ([Paystack preauthorization API](https://paystack.com/docs/api/preauthorization/))
+- **preAuthorization:** initialize, reserve, verify, capture, release, list, and fetch ([Paystack preauthorization API](https://paystack.com/docs/api/preauthorization/))
 - Bumped runtime `axios` to `1.19.0`.
 
 ## 3.6.1 - 2025-12-14
