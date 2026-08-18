@@ -24,7 +24,7 @@ import { Verification } from './verification/verification';
 import { VirtualTerminal } from './virtualterminal/virtualterminal';
 import { Refund } from './refund/refund';
 import { Misc } from './misc/misc';
-import { PreAuthorization } from './preauthorization/preAuthorization';
+import { PreAuthorization } from './preauthorization/preauthorization';
 import axios from 'axios';
 
 /**

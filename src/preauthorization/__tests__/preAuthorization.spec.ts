@@ -1,5 +1,5 @@
 import { Axios } from 'axios';
-import { PreAuthorization } from '../preAuthorization';
+import { PreAuthorization } from '../preauthorization';
 
 describe('PreAuthorization', () => {
   const http = {
