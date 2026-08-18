@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to Semantic Versioning.
 
+## 3.9.1
+
+### Fixed
+- **preAuthorization:** verify endpoint was incorrectly using the `verify` path instead of the `preauthorization` path.
+- **preAuthorization:** removed `fetch` endpoint as it duplicates the `verify` endpoint.
+
 ## 3.9.0
 
 ### Added

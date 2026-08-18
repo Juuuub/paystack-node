@@ -1,5 +1,5 @@
 import { Axios } from 'axios';
-import { PreAuthorization } from '../src/preauthorization/preAuthorization';
+import { PreAuthorization } from '../preAuthorization';
 
 describe('PreAuthorization', () => {
   const http = {
@@ -52,9 +52,7 @@ describe('PreAuthorization', () => {
 
     await preAuthorization.verify('pre_ref_123');
 
-    expect(http.get).toHaveBeenCalledWith(
-      '/preauthorization/verify/pre_ref_123',
-    );
+    expect(http.get).toHaveBeenCalledWith('/preauthorization/pre_ref_123');
   });
 
   it('captures a pre-authorization', async () => {
@@ -93,13 +91,5 @@ describe('PreAuthorization', () => {
     expect(http.get).toHaveBeenCalledWith('/preauthorization', {
       params: { page: 1, perPage: 50 },
     });
-  });
-
-  it('fetches a pre-authorization by id', async () => {
-    http.get.mockResolvedValue({ status: true });
-
-    await preAuthorization.fetch('523');
-
-    expect(http.get).toHaveBeenCalledWith('/preauthorization/523');
   });
 });

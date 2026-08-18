@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Paystack } from '../src/paystack';
+import { Paystack } from '../paystack';
 
 jest.mock('axios');
 const Axios = axios as jest.Mocked<typeof axios>;

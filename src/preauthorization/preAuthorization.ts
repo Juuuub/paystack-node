@@ -55,7 +55,7 @@ export class PreAuthorization {
   async verify(
     reference: string,
   ): Promise<GetPreAuthorizationResponse | BadRequest> {
-    return await this.http.get(`/preauthorization/verify/${reference}`);
+    return await this.http.get(`/preauthorization/${reference}`);
   }
 
   /**
@@ -92,12 +92,5 @@ export class PreAuthorization {
     return await this.http.get('/preauthorization', {
       params: { ...queryParams },
     });
-  }
-
-  /**
-   * Get details of a pre-authorization by id.
-   */
-  async fetch(id: string): Promise<GetPreAuthorizationResponse | BadRequest> {
-    return await this.http.get(`/preauthorization/${id}`);
   }
 }
